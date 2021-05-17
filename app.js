@@ -11,6 +11,10 @@ const path = require("path");
 const app = express();
 
 // MIDDLEWARE
+// Rendering static Pages
+app.use(express.static(path.join(__dirname, "public")));
+// Using body-parser
+app.use(bodyParser.urlencoded({ extended: false }));
 
 // ROUTES
 // Home Route
