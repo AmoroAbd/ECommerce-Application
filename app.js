@@ -1,6 +1,5 @@
 // IMPORTING REQUIRE PACKAGES - CORE MODULES *********************************************
 const express = require("express");
-const bodyParser = require("body-parser");
 const path = require("path");
 
 // IMPORTING INTERNAL FILES OR MODULES - MY OWN MODULES ***********************************
@@ -24,7 +23,7 @@ app.use(
 app.use(express.json());
 
 // USING ROUTES *****************************************************************************
-app.use(adminRoute);
+app.use("/admin", adminRoute);
 app.use(shopRoute);
 
 // ROUTES ************************************************************************************
