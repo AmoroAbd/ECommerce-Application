@@ -4,6 +4,7 @@ const router = express.Router();
 const path = require("path");
 
 // IMPORTING INTERNAL FILES OR MODULES - MY OWN MODULES ***********************************
+// const rootDir = require("../utils/path");
 
 // DECLARATIONS OF GLBAL VARIABLES ********************************************************
 
