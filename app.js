@@ -32,7 +32,7 @@ app.use(shopRoute);
 // 404 Route -
 app.use(function (req, res) {
   // res.status(404).sendFile(path.join(__dirname, "./", "views", "404.html"));
-  res.status(404).render("./views/404.ejs", { pageTitle: "Page Not Found" });
+  res.status(404).render("404.ejs", { pageTitle: "Page Not Found" });
 });
 
 // STARTING THE SERVER **************************************************************************
