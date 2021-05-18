@@ -26,7 +26,7 @@ app.use(shopRoute);
 
 // 404 Route -
 app.use(function (req, res) {
-  res.send("<h1>Page Not Found</h1>");
+  res.status(404).sendFile(path.join(__dirname, "./", "views", "404.html"));
 });
 
 // STARTING THE SERVER **************************************************************************
