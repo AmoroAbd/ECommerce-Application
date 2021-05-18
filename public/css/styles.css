@@ -98,3 +98,13 @@ ul.list-items {
   background-color: thistle;
   border: 0;
 }
+
+/* Footer ########################################################################  */
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  min-height: 3rem;
+  background-color: gray;
+  padding: 1rem 4rem;
+}

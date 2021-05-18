@@ -13,7 +13,13 @@ const adminRoute = require("./admin");
 // Home Route - "/" - GET
 router.get("/", function (req, res) {
   // res.sendFile(path.join(__dirname, "../", "views", "shop.html"));
-  res.render("shop.ejs", { pageTitle: "Shop" });
+  const products = adminRoute.products;
+  res.render("shop.ejs", {
+    pageTitle: "Shop",
+    prods: products,
+    path: "/",
+    activeShop: true,
+  });
 });
 
 // EXPORTING MODULE **********************************************************************
