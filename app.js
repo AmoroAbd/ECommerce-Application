@@ -16,7 +16,12 @@ const app = express();
 // Rendering static Pages
 app.use(express.static(path.join(__dirname, "public")));
 // Using body-parser
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(
+  express.urlencoded({
+    extended: true,
+  })
+);
+app.use(express.json());
 
 // USING ROUTES *****************************************************************************
 app.use(adminRoute);
