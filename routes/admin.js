@@ -12,13 +12,12 @@ const products = [];
 // ROUTES **********************************************************************************
 // Add Product Route - "/admin/add-product" - GET
 router.get("/add-product", function (req, res) {
-  res.sendFile(path.join(__dirname, "../", "views", "add-product.html"));
+  // res.sendFile(path.join(__dirname, "../", "views", "add-product.html"));
+  res.render("add-product.ejs", { pageTitle: "Add Product" });
 });
 
 // Product Route - "/admin/product" - POST
 router.post("/add-product", function (req, res) {
-
-
   //   res.sendFile(path.join(__dirname, "views", "shop.html"));
   res.redirect("/");
 });
