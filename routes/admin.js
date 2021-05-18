@@ -20,6 +20,7 @@ router.get("/add-product", function (req, res) {
 router.post("/add-product", function (req, res) {
   //   res.sendFile(path.join(__dirname, "views", "shop.html"));
   res.redirect("/");
+
 });
 
 // EXPORTING MODULE **********************************************************************
