@@ -15,26 +15,24 @@ const app = express();
 // Rendering static Pages
 app.use(express.static(path.join(__dirname, "public")));
 // Using body-parser
-<<<<<<< HEAD
 app.use(express.urlencoded({ extended: true }));
-=======
-app.use(
-  express.urlencoded({
-    extended: true,
-  })
-);
->>>>>>> working
 app.use(express.json());
 
+// TEMPLATE ENGINE - EJE
+// Using eje
+app.set("view engine", "ejs");
+app.set("views", "views");
+
 // USING ROUTES *****************************************************************************
-app.use("/admin", adminRoute);
+app.use("/admin", adminRoute.routes);
 app.use(shopRoute);
 
 // ROUTES ************************************************************************************
 
 // 404 Route -
 app.use(function (req, res) {
-  res.status(404).sendFile(path.join(__dirname, "./", "views", "404.html"));
+  // res.status(404).sendFile(path.join(__dirname, "./", "views", "404.html"));
+  res.status(404).render("./views/404.ejs", { pageTitle: "Page Not Found" });
 });
 
 // STARTING THE SERVER **************************************************************************

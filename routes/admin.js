@@ -7,6 +7,7 @@ const path = require("path");
 // const rootDir = require("../utils/path");
 
 // DECLARATIONS OF GLBAL VARIABLES *********************************************************
+const products = [];
 
 // ROUTES **********************************************************************************
 // Add Product Route - "/admin/add-product" - GET
@@ -16,10 +17,13 @@ router.get("/add-product", function (req, res) {
 
 // Product Route - "/admin/product" - POST
 router.post("/add-product", function (req, res) {
-  console.log(req.body);
+
+
   //   res.sendFile(path.join(__dirname, "views", "shop.html"));
   res.redirect("/");
 });
 
 // EXPORTING MODULE **********************************************************************
-module.exports = router;
+// module.exports = router;
+exports.routes = router;
+exports.products = products;
