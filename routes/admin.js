@@ -5,14 +5,16 @@ const path = require("path");
 
 // IMPORTING INTERNAL FILES OR MODULES - MY OWN MODULES ***********************************
 
-// DECLARATIONS OF GLBAL VARIABLES
+// DECLARATIONS OF GLBAL VARIABLES *********************************************************
+
+// ROUTES **********************************************************************************
 // Add Product Route - "/admin/add-product" - GET
 router.get("/add-product", function (req, res) {
   res.sendFile(path.join(__dirname, "../", "views", "add-product.html"));
 });
 
 // Product Route - "/admin/product" - POST
-router.post("/product", function (req, res) {
+router.post("/add-product", function (req, res) {
   console.log(req.body);
   //   res.sendFile(path.join(__dirname, "views", "shop.html"));
   res.redirect("/");

@@ -5,11 +5,12 @@ const path = require("path");
 
 // IMPORTING INTERNAL FILES OR MODULES - MY OWN MODULES ***********************************
 
-// DECLARATIONS OF GLBAL VARIABLES
+// DECLARATIONS OF GLBAL VARIABLES ********************************************************
 
+// ROUTES ***********************************************************************************
 // Home Route - "/" - GET
 router.get("/", function (req, res) {
-  res.send("<h1>Home</h1>");
+  res.sendFile(path.join(__dirname, "../", "views", "shop.html"));
 });
 
 // EXPORTING MODULE **********************************************************************
