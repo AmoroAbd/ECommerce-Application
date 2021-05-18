@@ -12,10 +12,15 @@
       <nav class="navbar container">
         <ul class="list-items">
           <li class="list-item">
-            <a href="/" class="active"> Shop</a>
+            <a href="/" class="<%= path ==='/' ? 'active' : '' %>"> Shop</a>
           </li>
           <li class="list-item">
-            <a href="/admin/add-product"> Add Product</a>
+            <a
+              href="/admin/add-product"
+              class="<%= path === '/admin/add-product' ? 'active' : '' %>"
+            >
+              Add Product</a
+            >
           </li>
         </ul>
       </nav>
