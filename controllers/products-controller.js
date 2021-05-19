@@ -18,11 +18,12 @@ exports.postAddProduct = function (req, res) {
 };
 // getProduct Controller - "/admin/product" - GET
 exports.getProducts = function (req, res) {
-  const products = Product.fetchAll();
-  res.render("shop.ejs", {
-    pageTitle: "Shop",
-    prods: products,
-    path: "/",
-    activeShop: true,
+  Product.fetchAll((products) => {
+    res.render("shop.ejs", {
+      pageTitle: "Shop",
+      prods: products,
+      path: "/",
+      activeShop: true,
+    });
   });
 };
