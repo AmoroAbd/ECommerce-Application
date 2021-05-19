@@ -24,7 +24,7 @@ app.set("view engine", "ejs");
 app.set("views", "views");
 
 // USING ROUTES *****************************************************************************
-app.use("/admin", adminRoute.routes);
+app.use("/admin", adminRoute);
 app.use(shopRoute);
 
 // ROUTES ************************************************************************************

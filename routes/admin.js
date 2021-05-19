@@ -9,20 +9,15 @@ const productsController = require("../controllers/products-controller");
 // const rootDir = require("../utils/path");
 
 // DECLARATIONS OF GLBAL VARIABLES *********************************************************
-const products = [];
 
 // ROUTES **********************************************************************************
 // Add Product Route - "/admin/add-product" - GET
 router.get("/add-product", productsController.getAddProduct);
 
 // Product Route - "/admin/product" - POST
-router.post("/add-product", function (req, res) {
-  //   res.sendFile(path.join(__dirname, "views", "shop.html"));
-  products.push({ title: req.body.title });
-  res.redirect("/");
-});
+router.post("/add-product", productsController.postAddProduct);
 
 // EXPORTING MODULE **********************************************************************
-// module.exports = router;
-exports.routes = router;
-exports.products = products;
+module.exports = router;
+// exports.routes = router;
+// exports.products = products;

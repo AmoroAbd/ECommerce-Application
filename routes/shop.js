@@ -2,25 +2,17 @@
 const express = require("express");
 const router = express.Router();
 const path = require("path");
+const { getProducts } = require("../controllers/products-controller");
 
 // IMPORTING INTERNAL FILES OR MODULES - MY OWN MODULES ***********************************
-const adminRoute = require("./admin");
+const productsController = require("../controllers/products-controller");
 // const rootDir = require("../utils/path");
 
 // DECLARATIONS OF GLBAL VARIABLES ********************************************************
 
 // ROUTES ***********************************************************************************
 // Home Route - "/" - GET
-router.get("/", function (req, res) {
-  // res.sendFile(path.join(__dirname, "../", "views", "shop.html"));
-  const products = adminRoute.products;
-  res.render("shop.ejs", {
-    pageTitle: "Shop",
-    prods: products,
-    path: "/",
-    activeShop: true,
-  });
-});
+router.get("/", productsController.getProducts);
 
 // EXPORTING MODULE **********************************************************************
 module.exports = router;
