@@ -1,5 +1,6 @@
+// IMPORTING REQUIRE PACKAGES - CORE MODULES *********************************************
+const Product = require("../models/products");
 // DECLARATIONS OF GLBAL VARIABLES *********************************************************
-const products = [];
 
 // CONTROLLERS **********************************************************************************
 // Add Product Controller - "/admin/add-product" - GET
@@ -11,11 +12,13 @@ exports.getAddProduct = function (req, res) {
 };
 // Product Controller - "/admin/product" - POST
 exports.postAddProduct = function (req, res) {
-  products.push({ title: req.body.title });
+  const product = new Product(req.body.title);
+  product.save();
   res.redirect("/");
 };
 // getProduct Controller - "/admin/product" - GET
 exports.getProducts = function (req, res) {
+  const products = Product.fetchAll();
   res.render("shop.ejs", {
     pageTitle: "Shop",
     prods: products,
