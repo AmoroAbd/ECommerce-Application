@@ -58,6 +58,10 @@ li {
 ul.list-items {
   display: flex;
 }
+/* .list-item{
+  height: 100%;
+  background-color: aqua;
+} */
 .list-item a {
   padding: 0 1rem;
   color: #ffffff;
@@ -73,6 +77,52 @@ ul.list-items {
   margin: auto;
   padding: 4rem;
 }
+.products-container {
+  width: 90%;
+  margin: auto;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+}
+/* Article - card-product-item */
+.card-product-item {
+  background-color: white;
+  /* margin: 0 2rem; */
+  padding: 0.5rem 0.1rem;
+  border: 0.3px solid lightblue;
+  box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* text-align: center; */
+}
+.card-product-item * {
+  margin: 0.1rem 0;
+}
+/* Product Header - card-product-header */
+.card-product-header {
+  text-transform: capitalize;
+}
+/* Product Image - card-product-image */
+.card-product-image {
+  /* width: 100%; */
+  background-color: gray;
+  padding: 0;
+}
+.card-product-image img {
+  width: 100%;
+  margin: 0;
+  /* box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6); */
+}
+/* Product Content - card-product-content */
+.card-product-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
 /* Forms ############################################################### */
 .form-add-product {
   width: 25rem;
