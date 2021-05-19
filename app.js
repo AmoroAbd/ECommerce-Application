@@ -5,6 +5,7 @@ const path = require("path");
 // IMPORTING INTERNAL FILES OR MODULES - MY OWN MODULES ***********************************
 const adminRoute = require("./routes/admin");
 const shopRoute = require("./routes/shop");
+const errorController = require("./controllers/error");
 
 // DECLARATIONS OF GLBAL VARIABLES
 
@@ -30,10 +31,7 @@ app.use(shopRoute);
 // ROUTES ************************************************************************************
 
 // 404 Route -
-app.use(function (req, res) {
-  // res.status(404).sendFile(path.join(__dirname, "./", "views", "404.html"));
-  res.status(404).render("404.ejs", { pageTitle: "Page Not Found" });
-});
+app.use(errorController.get404);
 
 // STARTING THE SERVER **************************************************************************
 const PORT = process.env.PORT || 3000;
