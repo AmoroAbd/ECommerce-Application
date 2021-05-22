@@ -11,15 +11,12 @@
       </section>
       <!-- Card Image Section - Containing product image -->
       <section class="card-product-image">
-        <img src="images/book.jpg" alt=" " />
+        <img src="<%= product.imageUrl %>" alt=" <%= product.title %> " />
       </section>
       <!-- Card Content Section - COntaining product details: price, description -->
       <section class="card-product-content">
-        <h2 class="product-price">$9.99</h2>
-        <p class="product-description">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis,
-          excepturi?
-        </p>
+        <h2 class="product-price"><%= product.price %></h2>
+        <p class="product-description">$<%= product.description %></p>
       </section>
       <!-- Card Action Section - Containing call to action - Add to cat button -->
       <section class="card-product-action">
