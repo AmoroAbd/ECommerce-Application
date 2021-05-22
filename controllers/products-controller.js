@@ -5,7 +5,7 @@ const Product = require("../models/products");
 // CONTROLLERS **********************************************************************************
 // Add Product Controller - "/admin/add-product" - GET
 exports.getAddProduct = function (req, res) {
-  res.render("add-product.ejs", {
+  res.render("admin/add-product.ejs", {
     pageTitle: "Add Product",
     path: "/admin/add-product",
   });
@@ -19,7 +19,7 @@ exports.postAddProduct = function (req, res) {
 // getProduct Controller - "/admin/product" - GET
 exports.getProducts = function (req, res) {
   Product.fetchAll((products) => {
-    res.render("shop.ejs", {
+    res.render("shop/product-list.ejs", {
       pageTitle: "Shop",
       prods: products,
       path: "/",
