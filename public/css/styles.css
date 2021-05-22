@@ -135,16 +135,19 @@ ul.list-items {
   font-weight: bold;
 }
 .form-control label,
-.form-control input {
+.form-control input,
+.form-control textarea {
   display: inline-block;
   width: 100%;
 }
-.form-control input {
+.form-control input,
+.form-control textarea {
   padding: 0.4rem 1rem;
   border-radius: 3px;
   border: 0.5px solid blue;
 }
-.form-control input:hover {
+.form-control input:hover,
+.form-control textarea:hover {
   background-color: thistle;
   border: 0;
 }
