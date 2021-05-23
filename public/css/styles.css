@@ -26,26 +26,22 @@ a.active {
 li {
   list-style: none;
 }
-.btn {
-  padding: 0.5rem 1rem;
+.btn,
+.btn a {
+  padding: 0.4rem 0.8rem;
   border: 0;
   border-radius: 3px;
   background-color: blue;
   color: #ffffff;
   margin: 0.2rem 0;
 }
-.btn-action {
-  padding: 0.5rem 1rem;
-  border: 0;
-  border-radius: 3px;
-  margin: 0.2rem 0;
-  background-color: purple;
-}
-.btn:hover {
+
+.btn:hover,
+.btn a:hover {
   background-color: thistle;
   color: blue;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 1.15rem;
+  font-weight: bold;
   cursor: pointer;
 }
 
@@ -161,19 +157,6 @@ ul.list-items {
 .card-product-action {
   display: flex;
   justify-content: space-around;
-}
-/* .card-product-action a {
-  padding: 0 1rem;
-  margin: 0 0.5rem;
-  align-items: center;
-  justify-content: center;
-} */
-.btn-action {
-  padding: 0.5rem 1rem;
-  border: 0;
-  border-radius: 3px;
-  margin: 0.2rem 0;
-  background-color: purple;
 }
 
 /* Footer ########################################################################  */
