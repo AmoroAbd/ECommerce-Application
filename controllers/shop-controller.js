@@ -1,5 +1,6 @@
 // IMPORTING REQUIRE PACKAGES - CORE MODULES *********************************************
 const Product = require("../models/products");
+const Cart = require("../models/cart");
 // DECLARATIONS OF GLBAL VARIABLES *********************************************************
 
 // CONTROLLERS **********************************************************************************
@@ -18,6 +19,7 @@ exports.getProducts = function (req, res) {
 // get 1 product
 exports.getProduct = function (req, res) {
   const prodId = req.params.productId;
+
   Product.findById(prodId, (product) => {
     res.render("../views/shop/product-detail.ejs", {
       product: product,
@@ -44,8 +46,10 @@ exports.getCart = function (req, res) {
 // post cart
 exports.postCart = function (req, res) {
   const prodId = req.body.productId;
-  console.log(prodId);
-  res.redirect("/");
+   Product.findById(prodId, (product) => {
+    Cart.addProduct(prodId, product.price);
+  });
+  res.redirect("/cart");
 };
 
 exports.getOrders = function (req, res) {

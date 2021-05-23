@@ -1,14 +1,14 @@
 <%- include("../includes/header.ejs") %>
-<main class="main container-centered">
-  <h1><%= product.title %></h1>
+<main class="main container-centered" id="product-details-page">
+  <h1 id="product-detail-page-title"><%= product.title %></h1>
   <hr />
-  <div>
+  <div id="product-details">
     <img src="<%= product.imageUrl %>" alt="<%= product.title %>" />
+    <div id="product-details-others">
+      <p><%= product.description %></p>
+      <h2>$<%= product.price %></h2>
+      <%- include("../includes/add-to-cart.ejs") %>
+    </div>
   </div>
-  <div>
-    <h2><%= product.price %></h2>
-    <p><%= product.description %></p>
-  </div>
-  <%- include("../includes/add-to-cart.ejs") %>
 </main>
 <%- include("../includes/footer.ejs") %>

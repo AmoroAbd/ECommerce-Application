@@ -48,6 +48,11 @@ li {
   font-weight: bold;
   cursor: pointer;
 }
+hr {
+  background-color: gray;
+  height: 1px;
+  width: 100%;
+}
 
 /* Header ######################################################################## */
 .header {
@@ -87,7 +92,7 @@ ul.list-items {
 .products-container {
   width: 90%;
   margin: auto;
-  padding: 2rem;
+  padding: 1rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 3rem;
@@ -119,6 +124,7 @@ ul.list-items {
 }
 .card-product-image img {
   width: 100%;
+  height: 13rem;
   margin: 0;
   /* box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6); */
 }
@@ -133,6 +139,11 @@ ul.list-items {
 /* Details and Add to cart section form -  product-details */
 .product-details {
   margin: 0 1rem;
+}
+/* product-description */
+.product-description {
+  padding: 0.5rem 0;
+  margin: 0.2rem 0;
 }
 
 /* Forms ############################################################### */
@@ -168,13 +179,68 @@ ul.list-items {
   justify-content: space-around;
   margin: 0.5rem 0;
 }
+/* Product Detail Page ############################################################  */
+/* product-details-page */
+#product-details-page {
+  min-height: 100vh;
+  overflow: hidden;
+}
+/* product-details */
+#product-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+/* product-detail-page-title */
+#product-detail-page-title {
+  text-transform: capitalize;
+}
+/* product-details image and product-details-others */
+#product-details img,
+#product-details-others {
+  width: 100%;
+  padding: 1rem 0;
+  margin: 1rem 0;
+  padding: 1rem 0;
+}
+
+/* product-details-others */
+#product-details-others {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/* product-details-others p */
+#product-details-others p,
+#product-details-others h2 {
+  margin: 0.5rem 0;
+}
+
+/* product-detail-page h1, h2 */
+#product-detail-page h1,
+h2 {
+  text-transform: capitalize;
+}
+/* product-detail-image */
+#product-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  padding: 1rem 0;
+}
+/* product-details-image */
+.product-details-image {
+  /* width: 100%; */
+}
 
 /* Footer ########################################################################  */
 .footer {
-  position: absolute;
+  /* position: absolute; */
   bottom: 0;
   width: 100%;
   min-height: 3rem;
   background-color: gray;
+  color: #ffffff;
+  text-align: center;
   padding: 1rem 4rem;
 }
