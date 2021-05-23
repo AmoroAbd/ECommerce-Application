@@ -38,9 +38,14 @@ exports.getIndex = function (req, res) {
 exports.getCart = function (req, res) {
   res.render("shop/cart.ejs", {
     pageTitle: "Your Cart",
-
     path: "/cart",
   });
+};
+// post cart
+exports.postCart = function (req, res) {
+  const prodId = req.body.productId;
+  console.log(prodId);
+  res.redirect("/");
 };
 
 exports.getOrders = function (req, res) {

@@ -19,13 +19,11 @@
         <p class="product-description">$<%= product.description %></p>
       </section>
       <!-- Card Action Section - Containing call to action - Add to cat button -->
-      <section class="card-product-action">
-        <form action="/cart" method="POST" class="add-to-cart">
-          <button class="btn">
-            <a href="/products/<%= product.id %>"> Details </a>
-          </button>
-          <button type="submit" class="btn">Add to Cart</button>
-        </form>
+      <section class="card-product-action details-and-cart">
+        <button class="btn">
+          <a href="/products/<%= product.id %>"> Details </a>
+        </button>
+        <%- include("../includes/add-to-cart.ejs", {product: product}) %>
       </section>
     </article>
     <% } %>

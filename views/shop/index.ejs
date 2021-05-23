@@ -20,7 +20,7 @@
       </section>
       <!-- Card Action Section - Containing call to action - Add to cat button -->
       <section class="card-product-action">
-        <button class="btn">Add to Cart</button>
+        <%- include("../includes/add-to-cart.ejs", {product: product}) %>
       </section>
     </article>
     <% } %>
