@@ -13,6 +13,9 @@ body {
 .container {
   padding: 0 4rem;
 }
+.container-centered {
+  text-align: center;
+}
 /* Utility Classes ############################################################### */
 a {
   color: #262626;
