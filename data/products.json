@@ -1,1 +1,9 @@
-[{"title":"A Book","imageUrl":"C:\\Users\\FORKOR MORO JUAH\\Desktop\\Current Learning\\Portfolio Projects_ Current Learning\\ECommerce-Application\\public\\images/book.jpg","description":"19.99","price":"Storing Product Details\r\n30. Display Product Details\r\n31. Editing and Deleting Products\r\n32. Adding Another Item"}]
+[
+  {
+    "title": "Book",
+    "imageUrl": "C:\\Users\\FORKOR MORO JUAH\\Desktop\\Current Learning\\Portfolio Projects_ Current Learning\\ECommerce-Application\\public\\images/book.jpg",
+    "description": "19.99",
+    "price": "padding: 0.padding: 0.4rem padding: 0.4rem 0.7rem;0.7rem;",
+    "id": "0.6979510776004265"
+  }
+]

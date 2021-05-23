@@ -21,7 +21,9 @@
       <!-- Card Action Section - Containing call to action - Add to cat button -->
       <section class="card-product-action">
         <form action="/add-to-cart" method="POST" class="add-to-cart">
-          <button class="btn"><a href="/"> Details </a></button>
+          <button class="btn">
+            <a href="/products/<%= product.id %>"> Details </a>
+          </button>
           <button class="btn">Add to Cart</button>
         </form>
       </section>

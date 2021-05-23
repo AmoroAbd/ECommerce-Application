@@ -28,7 +28,7 @@ li {
 }
 .btn,
 .btn a {
-  padding: 0.4rem 0.8rem;
+  padding: 0.4rem 0.7rem;
   border: 0;
   border-radius: 3px;
   background-color: blue;
@@ -38,6 +38,7 @@ li {
 
 .btn:hover,
 .btn a:hover {
+  padding: 0.4rem 0.5rem;
   background-color: thistle;
   color: blue;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
